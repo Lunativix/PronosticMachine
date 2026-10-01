@@ -1,0 +1,166 @@
+2026-09-25T16:29:10.400639+00:00 amelioration demarree. Mise imaginaire de 1. Aucun score n'est inventé.
+2026-09-25T16:31:13.698313+00:00 paris_fictifs crees=38 regles=0 aucun résultat réel
+2026-09-25T16:33:42.663662+00:00 amelioration demarree. Mise imaginaire de 1. Aucun score n'est inventé.
+2026-09-25T16:33:45.655655+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T16:35:47.197893+00:00 paris_fictifs crees=0 regles=0 aucun résultat réel
+2026-09-25T16:55:48.676060+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T16:57:50.260942+00:00 paris_fictifs crees=0 regles=0 aucun résultat réel
+2026-09-25T17:17:51.861603+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T17:19:53.860779+00:00 paris_fictifs crees=0 regles=0 aucun résultat réel
+2026-09-25T17:39:55.428160+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T17:41:56.872659+00:00 paris_fictifs crees=0 regles=0 aucun résultat réel
+2026-09-25T18:01:58.198451+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T18:03:59.767008+00:00 paris_fictifs crees=0 regles=0 aucun résultat réel
+2026-09-25T18:18:30.994999+00:00 amelioration demarree. Mise imaginaire de 1. Aucun score n'est inventé.
+2026-09-25T18:18:34.209691+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T18:20:57.953086+00:00 paris_fictifs crees=0 regles=1 agent: 1/1 profit=0.8333
+2026-09-25T18:40:57.095878+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T18:43:20.864047+00:00 paris_fictifs crees=0 regles=1 agent: 1/2 profit=-0.1667
+2026-09-25T19:03:22.176409+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T19:05:46.032699+00:00 paris_fictifs crees=0 regles=0 agent: 1/2 profit=-0.1667
+2026-09-25T19:25:47.458033+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T19:28:11.595212+00:00 paris_fictifs crees=0 regles=0 agent: 1/2 profit=-0.1667
+2026-09-25T19:48:13.146373+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T19:50:37.152594+00:00 paris_fictifs crees=0 regles=0 agent: 1/2 profit=-0.1667
+2026-09-25T20:10:38.693757+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T20:13:03.061397+00:00 paris_fictifs crees=0 regles=0 agent: 1/2 profit=-0.1667
+2026-09-25T20:33:04.590119+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T20:35:34.007624+00:00 refresh_scores_failed (sqlite3.OperationalError) database is locked
+[SQL: UPDATE competitions SET last_sync=? WHERE competitions.id = ?]
+[parameters: [('2026-09-25 20:35:28.419436', 4), ('2026-09-25 20:35:28.419436', 5), ('2026-09-25 20:35:28.419436', 6), ('2026-09-25 20:35:28.419436', 7), ('2026-09-25 20:35:28.419436', 8), ('2026-09-25 20:35:28.419436', 9), ('2026-09-25 20:35:28.419436', 10), ('2026-09-25 20:35:28.419436', 11)  ... displaying 10 of 220 total bound parameter sets ...  ('2026-09-25 20:35:28.419436', 222), ('2026-09-25 20:35:28.419436', 223)]]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-09-25T20:35:34.030048+00:00 Traceback (most recent call last): |   File "C:\Users\DENREE\Desktop\PronosticMachine\scripts\amelioration.py", line 90, in main |     cycle() |   File "C:\Users\DENREE\Desktop\PronosticMachine\scripts\amelioration.py", line 72, in cycle |     settled_again = record_experiments(session, []) |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |   File "C:\Users\DENREE\Desktop\PronosticMachine\backend\app\analysis\tracking.py", line 118, in record_experiments |     open_rows = session.scalars(select(TrackedProposition).where(TrackedProposition.status == "OPEN")).all() |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |   File "C:\Users\DENREE\Desktop\PronosticMachine\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2481, in scalars |     return self._execute_internal( |            ^^^^^^^^^^^^^^^^^^^^^^^ |   File "C:\Users\DENREE\Desktop\PronosticMachine\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2261, in _execute_internal |     conn = self._connection_for_bind(bind) |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |   File "C:\Users\DENREE\Desktop\PronosticMachine\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2113, in _connection_for_bind |     return trans._connection_for_bind(engine, execution_options) |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ |   File "<string>", line 2, in _connection_for_bind |   File "C:\Users\DENREE\Desktop\PronosticMachine\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 101, in _go |     self._raise_for_prerequisite_state(fn.__name__, current_state) |   File "C:\Users\DENREE\Desktop\PronosticMachine\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 975, in _raise_for_prerequisite_state |     raise sa_exc.PendingRollbackError( | sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (sqlite3.OperationalError) database is locked | [SQL: UPDATE competitions SET last_sync=? WHERE competitions.id = ?] | [parameters: [('2026-09-25 20:35:28.419436', 4), ('2026-09-25 20:35:28.419436', 5), ('2026-09-25 20:35:28.419436', 6), ('2026-09-25 20:35:28.419436', 7), ('2026-09-25 20:35:28.419436', 8), ('2026-09-25 20:35:28.419436', 9), ('2026-09-25 20:35:28.419436', 10), ('2026-09-25 20:35:28.419436', 11)  ... displaying 10 of 220 total bound parameter sets ...  ('2026-09-25 20:35:28.419436', 222), ('2026-09-25 20:35:28.419436', 223)]] | (Background on this error at: https://sqlalche.me/e/20/e3q8) (Background on this error at: https://sqlalche.me/e/20/7s2a) | 
+2026-09-25T20:55:35.573182+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T20:57:59.355769+00:00 paris_fictifs crees=0 regles=0 agent: 1/2 profit=-0.1667
+2026-09-25T21:18:00.938204+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T21:20:25.163716+00:00 paris_fictifs crees=0 regles=11 agent: 4/7 profit=1.0107, probabilite: 3/5 profit=1.0979, value: 1/1 profit=2.0
+2026-09-25T21:40:26.685913+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T21:42:50.421230+00:00 paris_fictifs crees=6 regles=6 agent: 4/7 profit=1.0107, probabilite: 6/10 profit=2.1958, value: 2/2 profit=4.0
+2026-09-25T22:02:51.889522+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T22:05:15.853139+00:00 paris_fictifs crees=6 regles=6 agent: 4/7 profit=1.0107, probabilite: 9/15 profit=3.2937, value: 3/3 profit=6.0
+2026-09-25T22:25:17.373731+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T22:27:41.594161+00:00 paris_fictifs crees=6 regles=6 agent: 4/7 profit=1.0107, probabilite: 12/20 profit=4.3916, value: 4/4 profit=8.0
+2026-09-25T22:47:42.828569+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T22:50:06.979597+00:00 paris_fictifs crees=6 regles=6 agent: 4/7 profit=1.0107, probabilite: 15/25 profit=5.4895, value: 5/5 profit=10.0
+2026-09-25T23:10:08.473775+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T23:12:32.537234+00:00 paris_fictifs crees=6 regles=6 agent: 4/7 profit=1.0107, probabilite: 18/30 profit=6.5874, value: 6/6 profit=12.0
+2026-09-25T23:32:34.238980+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T23:34:58.566908+00:00 paris_fictifs crees=6 regles=6 agent: 4/7 profit=1.0107, probabilite: 21/35 profit=7.6853, value: 7/7 profit=14.0
+2026-09-25T23:55:00.073336+00:00 veille medias=8 social=indisponible compos=0
+2026-09-25T23:57:25.357954+00:00 paris_fictifs crees=6 regles=0 agent: 4/7 profit=1.0107, probabilite: 24/40 profit=8.7832, value: 8/8 profit=16.0
+2026-09-26T00:00:29.964599+00:00 amelioration demarree. Mise imaginaire de 1. Aucun score n'est inventé.
+2026-09-26T00:00:34.827422+00:00 empire total=1114 ajoutes=1114 scores=879 articles=20 classements=150
+2026-09-26T00:02:58.688957+00:00 paris_fictifs crees=6 regles=0 agent: 13/22 profit=4.3044, probabilite: 27/45 profit=9.8811, value: 9/9 profit=18.0
+2026-09-26T00:23:01.695675+00:00 empire total=1126 ajoutes=0 scores=880 articles=20 classements=150
+2026-09-26T00:25:25.426914+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 30/50 profit=10.979, value: 10/10 profit=20.0
+2026-09-26T00:45:28.703644+00:00 empire total=1132 ajoutes=0 scores=880 articles=20 classements=150
+2026-09-26T00:47:52.759334+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 33/55 profit=12.0769, value: 11/11 profit=22.0
+2026-09-26T01:07:56.125648+00:00 empire total=1141 ajoutes=0 scores=883 articles=20 classements=150
+2026-09-26T01:10:20.405807+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 36/60 profit=13.1748, value: 12/12 profit=24.0
+2026-09-26T01:30:23.147465+00:00 empire total=1150 ajoutes=0 scores=886 articles=20 classements=150
+2026-09-26T01:32:47.184667+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 39/65 profit=14.2727, value: 13/13 profit=26.0
+2026-09-26T01:52:51.219243+00:00 empire total=1167 ajoutes=0 scores=897 articles=20 classements=150
+2026-09-26T01:55:15.383268+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 42/70 profit=15.3706, value: 14/14 profit=28.0
+2026-09-26T02:15:18.967874+00:00 empire total=1188 ajoutes=0 scores=912 articles=20 classements=150
+2026-09-26T02:17:42.911667+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 45/75 profit=16.4685, value: 15/15 profit=30.0
+2026-09-26T02:37:46.471196+00:00 empire total=1197 ajoutes=0 scores=915 articles=20 classements=150
+2026-09-26T02:40:10.205783+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 48/80 profit=17.5664, value: 16/16 profit=32.0
+2026-09-26T03:00:13.080891+00:00 empire total=1206 ajoutes=0 scores=918 articles=20 classements=150
+2026-09-26T03:02:36.817034+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 51/85 profit=18.6643, value: 17/17 profit=34.0
+2026-09-26T03:22:39.898700+00:00 empire total=1213 ajoutes=0 scores=919 articles=20 classements=150
+2026-09-26T03:25:03.600765+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 54/90 profit=19.7622, value: 18/18 profit=36.0
+2026-09-26T03:45:06.653915+00:00 empire total=1223 ajoutes=0 scores=923 articles=20 classements=150
+2026-09-26T03:47:30.333106+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 57/95 profit=20.8601, value: 19/19 profit=38.0
+2026-09-26T04:07:52.520467+00:00 veille_failed timed out
+2026-09-26T04:10:16.433945+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 60/100 profit=21.958, value: 20/20 profit=40.0
+2026-09-26T04:30:19.127675+00:00 empire total=1238 ajoutes=6 scores=926 articles=20 classements=150
+2026-09-26T04:32:42.771123+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 63/105 profit=23.0559, value: 21/21 profit=42.0
+2026-09-26T04:52:46.051544+00:00 empire total=1245 ajoutes=0 scores=927 articles=20 classements=150
+2026-09-26T04:55:09.979957+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 66/110 profit=24.1538, value: 22/22 profit=44.0
+2026-09-26T05:15:12.683809+00:00 empire total=1253 ajoutes=0 scores=929 articles=20 classements=150
+2026-09-26T05:17:36.695246+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 69/115 profit=25.2517, value: 23/23 profit=46.0
+2026-09-26T05:37:40.326492+00:00 empire total=1261 ajoutes=0 scores=931 articles=20 classements=150
+2026-09-26T05:40:04.317694+00:00 paris_fictifs crees=6 regles=6 agent: 13/22 profit=4.3044, probabilite: 72/120 profit=26.3496, value: 24/24 profit=48.0
+2026-09-26T06:00:06.845228+00:00 empire total=1275 ajoutes=6 scores=933 articles=21 classements=150
+2026-09-26T06:02:30.918952+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 75/125 profit=27.4475, value: 25/25 profit=50.0
+2026-09-26T06:22:34.770555+00:00 empire total=1282 ajoutes=1 scores=933 articles=22 classements=150
+2026-09-26T06:24:58.763909+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 78/130 profit=28.5454, value: 26/26 profit=52.0
+2026-09-26T06:45:20.746864+00:00 veille_failed timed out
+2026-09-26T06:47:44.937987+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 81/135 profit=29.6433, value: 27/27 profit=54.0
+2026-09-26T07:07:48.429432+00:00 empire total=1296 ajoutes=8 scores=934 articles=23 classements=150
+2026-09-26T07:10:12.555487+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 84/140 profit=30.7412, value: 28/28 profit=56.0
+2026-09-26T07:30:15.435012+00:00 empire total=1304 ajoutes=2 scores=934 articles=25 classements=150
+2026-09-26T07:32:39.685126+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 87/145 profit=31.8391, value: 29/29 profit=58.0
+2026-09-26T07:52:42.791057+00:00 empire total=1311 ajoutes=1 scores=934 articles=26 classements=150
+2026-09-26T07:55:07.115057+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 90/150 profit=32.937, value: 30/30 profit=60.0
+2026-09-26T08:15:10.782869+00:00 empire total=1318 ajoutes=1 scores=934 articles=27 classements=150
+2026-09-26T08:17:35.181967+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 93/155 profit=34.0349, value: 31/31 profit=62.0
+2026-09-26T08:37:38.017937+00:00 empire total=1326 ajoutes=2 scores=934 articles=29 classements=150
+2026-09-26T08:40:01.954575+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 96/160 profit=35.1328, value: 32/32 profit=64.0
+2026-09-26T09:00:05.302870+00:00 empire total=1332 ajoutes=0 scores=934 articles=29 classements=150
+2026-09-26T09:02:29.430169+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 99/165 profit=36.2307, value: 33/33 profit=66.0
+2026-09-26T09:22:33.001249+00:00 empire total=1338 ajoutes=0 scores=934 articles=29 classements=150
+2026-09-26T09:24:57.280430+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 102/170 profit=37.3286, value: 34/34 profit=68.0
+2026-09-26T09:45:00.913681+00:00 empire total=1344 ajoutes=0 scores=934 articles=29 classements=150
+2026-09-26T09:47:25.123014+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 105/175 profit=38.4265, value: 35/35 profit=70.0
+2026-09-26T10:07:28.967303+00:00 empire total=1351 ajoutes=1 scores=935 articles=29 classements=150
+2026-09-26T10:09:53.150588+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 108/180 profit=39.5244, value: 36/36 profit=72.0
+2026-09-26T10:29:58.985491+00:00 empire total=1358 ajoutes=1 scores=935 articles=30 classements=150
+2026-09-26T10:32:28.710180+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 111/185 profit=40.6223, value: 37/37 profit=74.0
+2026-09-26T10:52:51.971489+00:00 empire total=1364 ajoutes=0 scores=935 articles=30 classements=150
+2026-09-26T10:55:16.160406+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 114/190 profit=41.7202, value: 38/38 profit=76.0
+2026-09-26T11:15:19.145539+00:00 empire total=1375 ajoutes=2 scores=938 articles=32 classements=150
+2026-09-26T11:17:43.741709+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 117/195 profit=42.8181, value: 39/39 profit=78.0
+2026-09-26T11:37:48.114379+00:00 empire total=1383 ajoutes=1 scores=939 articles=33 classements=150
+2026-09-26T11:40:12.084123+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 120/200 profit=43.916, value: 40/40 profit=80.0
+2026-09-26T12:00:15.176176+00:00 empire total=1390 ajoutes=1 scores=939 articles=34 classements=150
+2026-09-26T12:02:39.327162+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 123/205 profit=45.0139, value: 41/41 profit=82.0
+2026-09-26T12:22:42.578304+00:00 empire total=1399 ajoutes=3 scores=939 articles=37 classements=150
+2026-09-26T12:25:06.580107+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 126/210 profit=46.1118, value: 42/42 profit=84.0
+2026-09-26T12:45:10.015063+00:00 empire total=1408 ajoutes=0 scores=942 articles=37 classements=150
+2026-09-26T12:47:34.016602+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 129/215 profit=47.2097, value: 43/43 profit=86.0
+2026-09-26T13:07:56.837679+00:00 veille_failed timed out
+2026-09-26T13:10:20.900957+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 132/220 profit=48.3076, value: 44/44 profit=88.0
+2026-09-26T13:30:24.211012+00:00 empire total=1424 ajoutes=9 scores=945 articles=38 classements=150
+2026-09-26T13:32:48.319919+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 135/225 profit=49.4055, value: 45/45 profit=90.0
+2026-09-26T13:52:51.117891+00:00 empire total=1431 ajoutes=1 scores=945 articles=39 classements=150
+2026-09-26T13:55:15.321353+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 138/230 profit=50.5034, value: 46/46 profit=92.0
+2026-09-26T14:15:18.576838+00:00 empire total=1438 ajoutes=0 scores=946 articles=39 classements=150
+2026-09-26T14:18:07.543350+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 141/235 profit=51.6013, value: 47/47 profit=94.0
+2026-09-26T14:38:10.958381+00:00 empire total=1445 ajoutes=0 scores=947 articles=39 classements=150
+2026-09-26T14:40:35.122524+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 144/240 profit=52.6992, value: 48/48 profit=96.0
+2026-09-26T15:00:38.985163+00:00 empire total=1454 ajoutes=1 scores=949 articles=40 classements=150
+2026-09-26T15:03:02.913387+00:00 paris_fictifs crees=6 regles=6 agent: 16/27 profit=5.4023, probabilite: 147/245 profit=53.7971, value: 49/49 profit=98.0
+2026-09-26T15:23:05.574644+00:00 empire total=1464 ajoutes=2 scores=951 articles=42 classements=150
+2026-09-26T15:25:29.830316+00:00 paris_fictifs crees=6 regles=9 agent: 16/28 profit=4.4023, probabilite: 150/251 profit=53.895, value: 50/51 profit=99.0
+2026-09-26T15:45:33.008615+00:00 empire total=1481 ajoutes=2 scores=957 articles=44 classements=150
+2026-09-26T15:47:57.040129+00:00 paris_fictifs crees=8 regles=8 agent: 16/28 profit=4.4023, probabilite: 153/257 profit=53.9929, value: 51/53 profit=100.0
+2026-09-26T16:08:00.363025+00:00 empire total=1489 ajoutes=0 scores=957 articles=44 classements=150
+2026-09-26T16:10:24.483137+00:00 paris_fictifs crees=8 regles=8 agent: 16/28 profit=4.4023, probabilite: 156/263 profit=54.0908, value: 52/55 profit=101.0
+2026-09-26T16:30:27.303312+00:00 empire total=1509 ajoutes=2 scores=967 articles=46 classements=150
+2026-09-26T16:32:51.250217+00:00 paris_fictifs crees=8 regles=8 agent: 16/28 profit=4.4023, probabilite: 159/269 profit=54.1887, value: 53/57 profit=102.0
+2026-09-26T16:52:54.302816+00:00 empire total=1558 ajoutes=0 scores=1008 articles=46 classements=150
+2026-09-26T16:55:18.324102+00:00 paris_fictifs crees=8 regles=8 agent: 16/28 profit=4.4023, probabilite: 162/275 profit=54.2866, value: 54/59 profit=103.0
+2026-09-26T17:15:21.217719+00:00 empire total=1572 ajoutes=1 scores=1013 articles=47 classements=150
+2026-09-26T17:17:46.124980+00:00 paris_fictifs crees=8 regles=8 agent: 16/28 profit=4.4023, probabilite: 165/281 profit=54.3845, value: 55/61 profit=104.0
+2026-09-26T17:37:49.794686+00:00 empire total=1584 ajoutes=2 scores=1015 articles=49 classements=150
+2026-09-26T17:40:14.727033+00:00 paris_fictifs crees=8 regles=8 agent: 16/28 profit=4.4023, probabilite: 168/287 profit=54.4824, value: 56/63 profit=105.0
+2026-09-26T18:00:17.314668+00:00 empire total=1593 ajoutes=0 scores=1016 articles=49 classements=150
+2026-09-26T18:02:42.425936+00:00 paris_fictifs crees=8 regles=8 agent: 16/28 profit=4.4023, probabilite: 171/293 profit=54.5803, value: 57/65 profit=106.0
+2026-09-26T18:22:45.067961+00:00 empire total=1602 ajoutes=0 scores=1017 articles=49 classements=150
+2026-09-26T18:25:09.842647+00:00 paris_fictifs crees=8 regles=14 agent: 16/30 profit=2.4023, probabilite: 174/301 profit=52.6782, value: 58/69 profit=105.0
+2026-09-26T18:45:13.175050+00:00 empire total=1625 ajoutes=1 scores=1025 articles=50 classements=150
+2026-09-26T18:47:38.355513+00:00 paris_fictifs crees=12 regles=12 agent: 16/30 profit=2.4023, probabilite: 177/309 profit=50.7761, value: 59/73 profit=104.0
+2026-09-26T19:07:41.912599+00:00 empire total=1647 ajoutes=0 scores=1035 articles=50 classements=150
+2026-09-26T19:10:06.461851+00:00 paris_fictifs crees=12 regles=12 agent: 16/30 profit=2.4023, probabilite: 180/317 profit=48.874, value: 60/77 profit=103.0
+2026-09-26T19:15:01.640056+00:00 amelioration demarree. Mise imaginaire de 1. Aucun score n'est inventé.
+2026-09-26T19:15:06.985276+00:00 empire total=1687 ajoutes=24 scores=1039 articles=50 classements=150
+2026-09-26T19:15:58.199166+00:00 amelioration demarree. Mise imaginaire de 1. Aucun score n'est inventé.
+2026-09-26T19:16:03.414243+00:00 empire total=1687 ajoutes=0 scores=1039 articles=50 classements=150
+2026-09-26T19:18:28.716605+00:00 paris_fictifs crees=0 regles=0 agent: 4/10 profit=-1.9893, probabilite: 3/8 profit=-1.9021, value: 1/4 profit=-1.0
+2026-09-26T19:38:32.601858+00:00 empire total=1694 ajoutes=0 scores=1046 articles=50 classements=150
+2026-09-26T19:40:58.942106+00:00 paris_fictifs crees=0 regles=0 agent: 4/10 profit=-1.9893, probabilite: 3/8 profit=-1.9021, value: 1/4 profit=-1.0
+2026-09-26T20:01:02.011410+00:00 empire total=1695 ajoutes=0 scores=1047 articles=50 classements=150
+2026-09-26T20:03:42.333836+00:00 paris_fictifs crees=0 regles=0 agent: 4/10 profit=-1.9893, probabilite: 3/8 profit=-1.9021, value: 1/4 profit=-1.0
+2026-09-26T20:23:45.694731+00:00 empire total=1698 ajoutes=0 scores=1050 articles=50 classements=150
+2026-09-26T20:26:10.403278+00:00 paris_fictifs crees=0 regles=0 agent: 4/10 profit=-1.9893, probabilite: 3/8 profit=-1.9021, value: 1/4 profit=-1.0

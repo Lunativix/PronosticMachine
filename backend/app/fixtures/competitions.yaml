@@ -1,0 +1,141 @@
+competitions:
+  - id: ligue1
+    name: Ligue 1
+    country: France
+    priority: 10
+    active: true
+    season: "2026"
+    providers:
+      espn: fra.1
+      api_football: "61"
+      football_data_org: FL1
+  - id: premier-league
+    name: Premier League
+    country: England
+    priority: 10
+    active: true
+    season: "2026"
+    providers:
+      espn: eng.1
+      api_football: "39"
+      football_data_org: PL
+  - id: laliga
+    name: La Liga
+    country: Spain
+    priority: 10
+    active: true
+    season: "2026"
+    providers:
+      espn: esp.1
+      api_football: "140"
+      football_data_org: PD
+  - id: serie-a
+    name: Serie A
+    country: Italy
+    priority: 10
+    active: true
+    season: "2026"
+    providers:
+      espn: ita.1
+      api_football: "135"
+      football_data_org: SA
+  - id: bundesliga
+    name: Bundesliga
+    country: Germany
+    priority: 10
+    active: true
+    season: "2026"
+    providers:
+      espn: ger.1
+      api_football: "78"
+      football_data_org: BL1
+  - id: ucl
+    name: UEFA Champions League
+    country: Europe
+    priority: 20
+    active: true
+    season: "2026"
+    providers:
+      espn: uefa.champions
+      api_football: "2"
+      football_data_org: CL
+  - id: uel
+    name: UEFA Europa League
+    country: Europe
+    priority: 20
+    active: true
+    season: "2026"
+    providers:
+      espn: uefa.europa
+      api_football: "3"
+      football_data_org: EL
+  - id: uecl
+    name: UEFA Conference League
+    country: Europe
+    priority: 15
+    active: true
+    season: "2026"
+    providers:
+      espn: uefa.europa.conf
+      api_football: "848"
+      football_data_org: ECL
+  - id: ligue2
+    name: Ligue 2
+    country: France
+    priority: 5
+    active: true
+    season: "2026"
+    providers:
+      espn: fra.2
+      api_football: "62"
+      football_data_org: FL2
+  - id: championship
+    name: Championship
+    country: England
+    priority: 5
+    active: true
+    season: "2026"
+    providers:
+      espn: eng.2
+      api_football: "40"
+      football_data_org: ELC
+  - id: eredivisie
+    name: Eredivisie
+    country: Netherlands
+    priority: 5
+    active: true
+    season: "2026"
+    providers:
+      espn: ned.1
+      api_football: "88"
+      football_data_org: DED
+  - id: primeira
+    name: Primeira Liga
+    country: Portugal
+    priority: 5
+    active: true
+    season: "2026"
+    providers:
+      espn: por.1
+      api_football: "94"
+      football_data_org: PPL
+  - id: scottish-premiership
+    name: Scottish Premiership
+    country: Scotland
+    priority: 5
+    active: true
+    season: "2026"
+    providers:
+      espn: sco.1
+      api_football: "179"
+      football_data_org: SPL
+  - id: mls
+    name: MLS
+    country: USA
+    priority: 5
+    active: true
+    season: "2026"
+    providers:
+      espn: usa.1
+      api_football: "253"
+      football_data_org: MLS
